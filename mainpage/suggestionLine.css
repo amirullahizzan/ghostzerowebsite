@@ -1,0 +1,25 @@
+.suggestionsListLine1 {
+    width: 60px;
+    height: 2px;
+    background-color: rgb(0, 149, 10);
+    position: absolute;
+    /* Change to absolute positioning */
+    top: 16px;
+    /* Position vertically in the middle */
+    right: -58px;
+    /* Adjust as needed */
+    transform: rotate(45deg);
+}
+
+.suggestionsListLine2 {
+    width: 60px;
+    height: 2px;
+    background-color: rgb(0, 149, 10);
+    position: absolute;
+    /* Change to absolute positioning */
+    top: -25px;
+    /* Position vertically in the middle */
+    right: -58px;
+    /* Adjust as needed */
+    transform: rotate(135deg);
+}

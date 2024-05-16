@@ -1,0 +1,59 @@
+.glow {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .glow img {
+    display: block;
+    width: 200px;  /* Adjust size as needed */
+    height: auto;  /* Maintain aspect ratio */
+    position: relative;
+    z-index: 2;  /* Ensure the image is above the pseudo-element */
+    border-radius: 50%;  /* Match the border-radius with your image if it's circular */
+  }
+  
+  .glow::before {
+    content: '';
+    position: absolute;
+    top: 45%;  /* Centers the pseudo-element vertically */
+    left: 25%;  /* Centers the pseudo-element horizontally */
+    width: 200%;  /* Sufficiently large to allow visible glow */
+    height: 200%;  /* Sufficiently large to allow visible glow */
+    border-radius: 50%;
+    margin-top: -100%;  /* Offset to center the glow */
+    margin-left: -100%;  /* Offset to center the glow */
+    background: rgba(102, 255, 0, 0.375);  /* Green glow with transparency */
+    box-shadow: 0 0 120px 10px rgba(102, 255, 0, 0.375);
+    transform: scale(0.03);  /* Initial scale of the glow */
+    z-index: 1;  /* Ensure the image is above the pseudo-element */
+    animation: glow-animation 0.1s infinite alternate;  /* Animation for pulsing effect */
+  }
+
+  .glow::after {
+    content: '';
+    position: absolute;
+    top: 45%;  /* Centers the pseudo-element vertically */
+    left: 72%;  /* Centers the pseudo-element horizontally */
+    width: 200%;  /* Sufficiently large to allow visible glow */
+    height: 200%;  /* Sufficiently large to allow visible glow */
+    border-radius: 50%;
+    margin-top: -100%;  /* Offset to center the glow */
+    margin-left: -100%;  /* Offset to center the glow */
+    background: rgba(102, 255, 0, 0.375);  /* Green glow with transparency */
+    box-shadow: 0 0 120px 10px rgba(102, 255, 0, 0.375);  /* Glow spread and color */
+    transform: scale(0.03);  /* Initial scale of the glow */
+    z-index: 1;  /* Ensure the image is above the pseudo-element */
+    animation: glow-animation 0.1s infinite alternate;  /* Animation for pulsing effect */
+  }
+  
+  @keyframes glow-animation {
+    0% {
+      transform: scale(0.05);  /* Start from a visible size */
+      opacity: 0.9;  /* Start fully transparent */
+    }
+    100% {
+      transform: scale(0.06);  /* Scale up the glow */
+      opacity: 1;  /* Fully visible */
+    }
+  }
+  

@@ -1,0 +1,34 @@
+body{
+    color: #15ff00
+}
+
+body{
+    background-color: black;
+}
+
+body{
+    text-align: center;
+}
+
+ul, ol {
+    list-style-position: inside; /* Keep bullets/numbers inside the list area */
+    text-align: left; /* Align text to the left for list items */
+    display: inline-block; /* Center the block of lists */
+    padding-left: 20px; /* Add padding to the left of list to position numbers and bullets */
+    margin: 0 auto; /* Removes default margin and centers the list in its container */
+}
+
+/* Apply specific margin and padding for list items if needed */
+li {
+    margin: 0;
+    padding: 0;
+}
+
+#time-container
+{
+    top: 0;
+    right: 0;
+    position: fixed;
+    color: rgba(255, 255, 255, 0.577);
+    padding: 20px;
+};

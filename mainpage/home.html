@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ghostZER0</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="/static/img/ghostZero.ico">
+
+    <!-- Theme Color :  #15ff00 -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <div id="time-container"></div>
+    <script src="time-container.js"></script>
+</head>
+
+<body>
+    <h1 id="top" style="margin-top: 40px;"> <span style="color: #ffffff;">Welcome,</span> ghostZER0</h1>
+    <div class="glow" style="margin-top: 10px; margin-bottom: 50px;">
+        <img src="static/img/ghostZeroMedTrans.png" alt="Glowing PNG">
+        <link rel="stylesheet" href="glow.css">
+        <link rel="stylesheet" href="suggestionLine.css">
+    </div>
+
+
+
+
+    <form onsubmit="return handleCommand(this)">
+        <span style="text-decoration: none; color: #15ff00;" tabindex="-1">Quick Terminal</a> </span>
+        <input id="commandInput" type="text" name="query" placeholder="Command..." autocomplete="off">
+        <input type="submit" value="Execute" tabindex="-1">
+    </form>
+    <br>
+    <form action="https://www.google.com/search" method="get" style="vertical-align: top;">
+
+        <div style="position: relative; display: inline-block; right : -2px;">
+            <span> <a href="https://www.google.com/search" style="text-decoration: none; color: #15ff00;"
+                    tabindex="-1">Search Google</a>
+            </span>
+        </div>
+        <div style="position: relative; display: inline-block; left: 4px;">
+            <input id="searchInput" type="text" name="query" placeholder="Search..." autocomplete="off">
+            <input type="submit" value="Search" tabindex="-1" style="position: relative; width: 58px; left: 0px;">
+        </div>
+        <div id="suggestionsContainer" style="position: absolute; display: none; right : 420px">
+            <div class="suggestionsListLine1"></div>
+            <div class="suggestionsListLine2"></div>
+        </div>
+        <div style="position: relative; margin-top: -130px; left: 240px">
+            <ul id="suggestionsList" style="list-style-type: none; padding: 0; position: absolute; left: 1;">
+            </ul>
+        </div>
+    </form>
+
+    <script src="script/searchSuggestions.js">
+    </script>
+
+    <div style="margin-top: 140px;">
+        <span id="terminalPrompt" style="text-decoration: none; margin-top: -1px; color: #15ff00;"
+            tabindex="-1">Terminal :</span>
+        <span id="terminalOutput" style="text-decoration: none; margin-top: -1px; color: #ffffff;" tabindex="-1">
+            ... </span>
+    </div>
+
+    <script src="script/quickTerminal.js"></script>
+    <script>
+
+    </script>
+
+    </div>
+
+    <div style="margin-bottom: 80px; margin-top: 45px;">
+
+        <form action="/lock" method="post" style="margin-left: 40px;">
+            <button type="submit" style="border: none; background-color: transparent; padding: 0; cursor: pointer;">
+                <span style="border: none; margin-left: -20px; margin-right: 10px; color: #15ff00;">Lock Session </span>
+                <img src="static/img/lockpad.ico" alt="padlock.png" width="25" height="25" style="vertical-align: -5px">
+            </button>
+        </form>
+
+    </div>
+
+
+
+    <!--#include file="footer.html"-->
+
+</body>
+
+</html>
